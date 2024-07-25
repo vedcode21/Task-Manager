@@ -1,0 +1,117 @@
+/* Notification styles */
+.notification-container {
+  position: fixed;
+  top: 20px; /* Adjust the top position as per your preference */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.notification-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slide-in 0.3s ease forwards;
+  margin-bottom: 10px; /* Optional: Add margin between notifications */
+}
+
+.notification-item .notification-content {
+  flex: 1;
+}
+
+.notification-item .notification-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.notification-item .notification-message {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.notification-item .notification-timestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+.notification-item .notification-actions {
+  margin-left: 10px;
+}
+
+.notification-item .dismiss-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Notification types */
+.notification-item.notification-success {
+  border-color: #28a745;
+}
+
+.notification-item.notification-success .notification-icon {
+  color: #28a745;
+}
+
+.notification-item.notification-error {
+  border-color: #dc3545;
+}
+
+.notification-item.notification-error .notification-icon {
+  color: #dc3545;
+}
+
+.notification-item.notification-default {
+  border-color: #007bff;
+}
+
+.notification-item.notification-default .notification-icon {
+  color: #007bff;
+}
+
+/* Additional styles for different types of notifications */
+.notification-item.notification-info {
+  border-color: #17a2b8;
+}
+
+.notification-item.notification-info .notification-icon {
+  color: #17a2b8;
+}
+
+.notification-item.notification-warning {
+  border-color: #ffc107;
+}
+
+.notification-item.notification-warning .notification-icon {
+  color: #ffc107;
+}
+
+/* Animation */
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.notification-info {
+  border-color: #17a2b8; /* Adjust color as needed */
+}
+
+.notification-info .notification-icon {
+  color: #17a2b8; /* Adjust icon color as needed */
+}
+
